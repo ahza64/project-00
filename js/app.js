@@ -94,7 +94,7 @@ $(document).on('ready', function() {
     //building the keypress automatiaclly
     this.keyStroke = function key(pressNum){
       $(window).on("keyup", function handleKeypress(event) {
-        if(event.keyCode === (47 + playerPos)){
+        if(event.keyCode === (48 + playerPos)){
           if(pressNum === (boardLength-1)){
             $('#' + letter + pressNum).text(".");
             $('#' + letter + (pressNum-1)).text("_______");
