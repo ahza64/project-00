@@ -1,25 +1,24 @@
 Racing Game:
 
-press your player's key repaeatedly to win the race.
+Race your friends by pressing your Avatars number key on the keyboard repeatedly faster than your opponent. Select the number of players, and the board length. Your key is the number of your player.
+
+Press your player's key repeatedly to win the race.
 Short explanation of the project (1-2 sentences) - what is the goal of the project and/or main functionality?
 
 Technologies Used
 
-There is no hardcoding when building the players and the board.
-What technologies did you use to develop this project? (bullet points)
+Using HTML, CSS, jQuery, an external API and javaScript object oriented programming (OOP), I've created a race game. The player objects, board objects and Avatar creations are created by the computer. There are no hard coded objects. Theoretically, you can create infinite player objects and board lengths (well, 52^52 number based on my random id generator). Unknowingly at the time, I created a rudimentary foundation for a non-sQL database.
 
 Existing Features
 
-Move token with button press. you can change board length and player number with
-one number change for each.
-What features does your racing game have? (bullet points)
+The most important feature of this app, is not only the utilization of OOP, but that the app creates the objects themselves. Only ten players and a board length of up to 20 should be used due to the limited processing power of a web browser and the limited number of keys on the key board.
+
+Some other notable features are the API call to create an avatar image.
 
 Planned Features
 
-set inputs to decide board length and number of players. set up spotify search
-to enter track and pop up first album img as avatar.
-What changes would you make to your project if you continue to work on it? (bullet points)
+I think keeping track of wins is important, and will be added in the future.
 
-Screenshot (optional)
+Screenshot
 
-Link to hosted project on GitHub pages or BitBalloon (optional)
+Link to hosted project on GitHub pages or BitBalloon 
