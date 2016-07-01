@@ -13,7 +13,7 @@ Existing Features
 
 The most important feature of this app, is not only the utilization of OOP, but that the app creates the objects themselves. Only ten players and a board length of up to 20 should be used due to the limited processing power of a web browser and the limited number of keys on the key board.
 
-Some other notable features are the API call to create an avatar image.
+Some other notable features are the API call to create an avatar image and board token.
 
 Planned Features
 
@@ -21,4 +21,4 @@ I think keeping track of wins is important, and will be added in the future.
 
 Screenshot
 
-Link to hosted project on GitHub pages or BitBalloon 
+Link to hosted project on GitHub pages or BitBalloon

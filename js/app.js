@@ -65,19 +65,6 @@ setUpGame();
     return spaces;
   }
 
-  //truning the array of objects, into objects with different names
-  // playersArr.forEach(function (element, index){
-  //  var player+index = element;
-  // });
-
-  //sample hard coded player objects
-  //player1 = new Player("blue", "a", "count", 1);
-  //player2 = new Player("red", "b", "up", 2);
-//playersArr[0].buildRow();
-//playersArr[1].buildRow();
-//playersArr[2].buildRow();
-  //player1.buildString();
-  //player2.buildString();
   function resetKeypress(nums){
     for(var z = 0; z < nums; z ++){
       playersArr[z].keyStroke(0);
@@ -90,14 +77,10 @@ setUpGame();
   function Player(color, letter, playerPos, lpressNum) {
     this.playerColor = color;
     this.playerLetter = letter;
-    //this.pressNum = Nums;
-    //building the board automatically
     this.buildRow = function (){
-                          //for(r = 0; r < 2; r++){
                           $('#board').append('<div class="size '+this.playerColor+
                             '"><img class="avatar" id="' + this.playerColor + '" src=https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/079/233/062b1d4.jpg> ' +
                             playerPos + '</div>');
-                          //}//for
                           this.buildString();
                           this.keyStroke(0);
                     };//buildRow
@@ -105,7 +88,6 @@ setUpGame();
                             for(var t = 0; t < boardLength; t++){
                               $('.'+this.playerColor).append('<div class="inline clear ' +
                                 this.playerLetter + '" id="' + letter + t + '">_______</div>');
-                                //<img id=a"'+letter+t+'" src="">');
                             }//for
                             //finish line
                             $('.'+this.playerColor).append('<div class="inline">|</div>');
@@ -113,11 +95,6 @@ setUpGame();
 
     //building the keypress automatiaclly
     this.keyStroke = function key(pressNum){
-                        //console.log("The call is coming from inside the function!");
-                        //var counter = 0;
-                        //var not = keyPressNum;
-                        //var n = 0;
-                        //var pressNum = n;
                         $(window).on("keyup", function handleKeypress(event) {
                           if(event.keyCode === (47 + playerPos)){
                             if(pressNum === (boardLength-1)){
@@ -125,43 +102,22 @@ setUpGame();
                               $('#' + letter + (pressNum-1)).text("_______");
                               console.log(pressNum);
                               alert('player' + playerPos + ' has won!');
-                              //$('#board').remove();
-                              //$('.inline').remove();
-                              //resetKeypress(countPlayers);
-                              //keyPressNum = 0;
                               $('.clear').text("_______");
 //I could not get the board to reset properly
-                              //$('#board').empty();
                               pressNum = 0;
-                              //window.location.reload();
-                              //key(0);
-                              //setUpGame();
-                              // console.log(pressNum);
-                              // console.log(playersArr[1].pressNum);
-                              //resetKeypress(countPlayers);
-                              //playersArr = [];
-                              //letter = '';
-                              //numPlayers(countPlayers);
-                              //setUpGame();
+                              window.location.reload();
                             }else{
-                              //$('#a' + count).append("b");
-                              //$('#' + this.playerLetter + (count - 1)).empty();
-                              //$('#a' + letter + pressNum).attr(src, "http://i.imgur.com/mRGbsfa.jpg");
                               $('#' + letter + pressNum).append("<img class=avatar src=http://i.imgur.com/mRGbsfa.jpg>");
-                              //$('#' + letter + pressNum).text('>');
                               $('#' + letter + (pressNum-1)).text("_______");
-                              //$('#' + letter + counter - 1).text(" ");
                               console.log('#' + letter + pressNum);
                               pressNum++;
                             }
-                            //pressNum = 0;
                           }//if key code
                         });//keypress
                       };
 
     this.avatar = function() {
                     $('#search-form').on("submit", function handleSubmit(event){
-                      //console.log('form submitted');
                       event.preventDefault();
                       //see the serialized info
                       console.log("form serialized", $('#search-form').serialize());
@@ -199,35 +155,8 @@ setUpGame();
 
                       }
                     }); //handleCallback
-
                   };//movement
   }//Player
-
-  // var count = 0;
-  // $(window).on("keypress", function handleKeypress(event) {
-  //   if(event.keyCode === 32){
-  //     //$('#a' + count).append("b");
-  //     //$('#' + player1.playerLetter + (count - 1)).empty();
-  //     $('#' + player1.playerLetter + count).append(player1.playerLetter);
-  //     $('#' + player1.playerLetter + count - 1).text(" ");
-  //     console.log('#' + player1.playerLetter + count);
-  //     count++;
-  //   }//if
-  // });//keypress
-  //
-  // var up = 0;
-  // $(window).on("keypress", function handleKeypress(event) {
-  //   if(event.keyCode === 49){
-  //     //$('#a' + up).append("b");
-  //     //$('#' + letter + (up - 1)).empty();
-  //     $('#' + player2.playerLetter + up).append(player2.playerLetter);
-  //     console.log('#' + letter + up);
-  //     up++;
-  //   }//if
-  // });//keypress
-
-
-
 
 
 }); //doc ready
