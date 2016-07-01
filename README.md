@@ -2,9 +2,6 @@ Racing Game:
 
 Race your friends by pressing your Avatars number key on the keyboard repeatedly faster than your opponent. Select the number of players, and the board length. Your key is the number of your player.
 
-Press your player's key repeatedly to win the race.
-Short explanation of the project (1-2 sentences) - what is the goal of the project and/or main functionality?
-
 Technologies Used
 
 Using HTML, CSS, jQuery, an external API and javaScript object oriented programming (OOP), I've created a race game. The player objects, board objects and Avatar creations are created by the computer. There are no hard coded objects. Theoretically, you can create infinite player objects and board lengths (well, 52^52 number based on my random id generator). Unknowingly at the time, I created a rudimentary foundation for a non-sQL database.
