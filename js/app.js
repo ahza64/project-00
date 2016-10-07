@@ -15,7 +15,7 @@ $(document).on('ready', function() {
     var playerNum = 1;
     for(var s = 0; s < num; s++){
       //setting into an array, since you cannot directly alter a var
-      playersArr[s] = new Player(randString(), randString(), playerNum, Nums);
+      playersArr[s] = new Player(randString(), randString(), playerNum, Nums, resetKeypress);
       playerNum++;
     }
     //console.log(playersArr);
@@ -87,7 +87,7 @@ setUpGame();
   }
 
   //big constructor, to handle all functions per object/player
-  function Player(color, letter, playerPos, lpressNum) {
+  function Player(color, letter, playerPos, lpressNum, resetK) {
     this.playerColor = color;
     this.playerLetter = letter;
     //this.pressNum = Nums;
@@ -112,7 +112,7 @@ setUpGame();
                         };//buildString
 
     //building the keypress automatiaclly
-    this.keyStroke = function key(pressNum){
+    this.keyStroke = function key(pressNum, resetKeypress){
                         //console.log("The call is coming from inside the function!");
                         //var counter = 0;
                         //var not = keyPressNum;
@@ -138,7 +138,7 @@ setUpGame();
                               //setUpGame();
                               // console.log(pressNum);
                               // console.log(playersArr[1].pressNum);
-                              //resetKeypress(countPlayers);
+                              resetKeypress(countPlayers);
                               //playersArr = [];
                               //letter = '';
                               //numPlayers(countPlayers);
